@@ -26,7 +26,6 @@ app.get('/products', (req, res) => {
 
 // GET product by ID
 app.get('/products/:id', (req, res) => {
-    // ใช้ products.find (ตัวแปรคนละชื่อกับ product ข้างใน)
     const foundProduct = products.find(p => p.id === parseInt(req.params.id));
     
     if (!foundProduct) {
